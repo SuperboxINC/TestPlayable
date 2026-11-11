@@ -15,10 +15,10 @@ html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;touch-action
 #ui [data-ui]{pointer-events:auto}
 .disp{font-family:"Arial Rounded MT Bold","Trebuchet MS","Avenir Next",Roboto,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;font-weight:900;paint-order:stroke fill;-webkit-text-stroke:calc(var(--fs)*0.13) var(--ink);text-shadow:0 calc(var(--fs)*0.07) 0 var(--ink)}
 #hudTop{position:absolute;display:flex;flex-direction:column;align-items:center;gap:calc(6*var(--u))}
-#levelPill{--fs:max(16px,calc(20*var(--u)));font-size:var(--fs);line-height:1.15;padding:calc(5*var(--u)) calc(16*var(--u));border-radius:999px;background:linear-gradient(#FFD54A,#FFB200);box-shadow:0 calc(4*var(--u)) 0 #B97800;color:#fff;white-space:nowrap}
-#goal{--fs:max(16px,calc(21*var(--u)));font-size:var(--fs);line-height:1.2;text-align:center;max-width:100%}
+#levelPill{position:absolute;--fs:max(15px,calc(17*var(--u)));font-size:var(--fs);line-height:1.15;padding:calc(5*var(--u)) calc(14*var(--u));border-radius:999px;background:linear-gradient(#FFD54A,#FFB200);box-shadow:0 calc(4*var(--u)) 0 #B97800;color:#fff;white-space:nowrap}
+#goal{--fs:max(18px,calc(26*var(--u)));--ink:#4C5391;font-size:var(--fs);line-height:1.2;text-align:center;max-width:100%;color:#EEF0FA}
 #goal .c{color:var(--acc)}
-#countRow{display:flex;align-items:center;gap:calc(8*var(--u));background:rgba(20,24,70,.55);border-radius:calc(12*var(--u));padding:calc(4*var(--u)) calc(12*var(--u))}
+#countRow{display:flex;align-items:center;gap:calc(8*var(--u));background:rgba(20,24,70,.45);border-radius:calc(12*var(--u));padding:calc(3*var(--u)) calc(12*var(--u))}
 #countCap{font-size:max(13px,calc(14*var(--u)));font-weight:600;opacity:.92;white-space:nowrap}
 #countVal{font-size:max(16px,calc(19*var(--u)));font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
 #mute{position:absolute;width:max(48px,calc(46*var(--u)));height:max(48px,calc(46*var(--u)));border-radius:50%;border:0;background:rgba(20,24,70,.55);display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer}
@@ -55,11 +55,11 @@ html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;touch-action
 </style>
 </head>
 <body>
-<script>window.__NETWORK="universal";window.__STORE={"ios":"","android":""};window.__UI_SKIN="";window.__LANG="";window.__DIFF="normal";window.__PARAMS={"stage_count":3.0,"drag_speed":1.0,"exit_push":0.35,"mirror_boards":"off","start_stage":1.0,"celebrate_time":1.4,"confetti_amount":14.0,"points_per_brick":100.0,"sfx_volume":30.0,"music_volume":20.0,"camera_distance":1.0,"camera_pitch":0.0,"camera_follow":1.0,"camera_shake":1.0,"camera_fov":0.0,"camera_height":0.0,"camera_yaw":0.0,"camera_lead":1.0,"camera_intro_zoom":1.0,"camera_payoff_zoom":1.0,"background":"Baseplate","ground_color":"#2E3672","path_color":"#4A56A2","sky_top_color":"#5A66A6","fog_color":"#2B3266","player_color":"#FDC605","player_color2":"#FFF4D6","enemy_color":"#1E9BF0","reward_color":"#FFE14D","ui_accent":"#FFC21A","end_title":"","end_sub":"","cta_text":"","locale":"auto","difficulty":"normal","max_play_time":90.0,"hint_delay":3.0,"stageCount":3.0,"dragSpeed":1.0,"exitPush":0.35,"mirrorBoards":"off","startStage":1.0,"celebrateTime":1.4,"confettiAmount":14.0,"pointsPerBrick":100.0,"sfxVolume":30.0,"musicVolume":20.0,"cameraDistance":1.0,"cameraPitch":0.0,"cameraFollow":1.0,"cameraShake":1.0,"cameraFov":0.0,"cameraHeight":0.0,"cameraYaw":0.0,"cameraLead":1.0,"cameraIntroZoom":1.0,"cameraPayoffZoom":1.0,"groundColor":"#2E3672","pathColor":"#4A56A2","skyTopColor":"#5A66A6","fogColor":"#2B3266","playerColor":"#FDC605","playerColor2":"#FFF4D6","enemyColor":"#1E9BF0","rewardColor":"#FFE14D","uiAccent":"#FFC21A","endTitle":"","endSub":"","ctaText":"","maxPlayTime":90.0,"hintDelay":3.0};</script>
+<script>window.__NETWORK="universal";window.__STORE={"ios":"","android":""};window.__UI_SKIN="";window.__LANG="";window.__DIFF="normal";window.__PARAMS={"stage_count":3.0,"drag_speed":1.0,"exit_push":0.35,"mirror_boards":"off","start_stage":1.0,"celebrate_time":1.4,"confetti_amount":14.0,"points_per_brick":100.0,"sfx_volume":30.0,"music_volume":20.0,"camera_distance":1.0,"camera_pitch":0.0,"camera_follow":1.0,"camera_shake":1.0,"camera_fov":0.0,"camera_height":0.0,"camera_yaw":0.0,"camera_lead":1.0,"camera_intro_zoom":1.0,"camera_payoff_zoom":1.0,"background":"Baseplate","ground_color":"#2E3672","path_color":"#4A56A2","sky_top_color":"#5A66A6","fog_color":"#2B3266","player_color":"#FDC605","player_color2":"#FFF4D6","enemy_color":"#1E9BF0","reward_color":"#FFE14D","ui_accent":"#FFC21A","end_title":"","end_sub":"","cta_text":"","locale":"auto","difficulty":"normal","max_play_time":240.0,"hint_delay":3.0,"stageCount":3.0,"dragSpeed":1.0,"exitPush":0.35,"mirrorBoards":"off","startStage":1.0,"celebrateTime":1.4,"confettiAmount":14.0,"pointsPerBrick":100.0,"sfxVolume":30.0,"musicVolume":20.0,"cameraDistance":1.0,"cameraPitch":0.0,"cameraFollow":1.0,"cameraShake":1.0,"cameraFov":0.0,"cameraHeight":0.0,"cameraYaw":0.0,"cameraLead":1.0,"cameraIntroZoom":1.0,"cameraPayoffZoom":1.0,"groundColor":"#2E3672","pathColor":"#4A56A2","skyTopColor":"#5A66A6","fogColor":"#2B3266","playerColor":"#FDC605","playerColor2":"#FFF4D6","enemyColor":"#1E9BF0","rewardColor":"#FFE14D","uiAccent":"#FFC21A","endTitle":"","endSub":"","ctaText":"","maxPlayTime":240.0,"hintDelay":3.0};</script>
 <div id="stage">
 <div id="game"></div>
 <div id="ui">
-<div id="hudTop"><div id="levelPill" class="disp" data-hud="level"></div><div id="goal" class="disp"></div><div id="countRow"><span id="countCap"></span><span id="countVal" data-hud="cleared"></span></div></div>
+<div id="levelPill" class="disp" data-hud="level"></div><div id="hudTop"><div id="goal" class="disp"></div><div id="countRow"><span id="countCap"></span><span id="countVal" data-hud="cleared"></span></div></div>
 <button id="mute" data-ui="1" aria-label="Sound"><svg viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z" fill="#fff"></path><path id="muteWave" d="M16 8.5c1.6 1.8 1.6 5.2 0 7M18.5 6c3 3.2 3 8.8 0 12" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"></path><path id="muteX" d="M16 9l6 6M22 9l-6 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" style="display:none"></path></svg></button>
 <div id="hintLine"></div>
 <svg id="hand" viewBox="0 0 64 64"><path d="M22 6c3 0 5 2 5 5v17l3-1c3-1 5 0 6 2l1 1 2-1c3-1 5 0 6 2l1 1 2-1c3-1 6 1 6 4v12c0 9-7 15-16 15h-4c-6 0-10-3-13-8L10 41c-2-3-1-6 2-7 2-1 4 0 6 2l-1-3V11c0-3 2-5 5-5z" fill="#fff" stroke="#2A2F66" stroke-width="3" stroke-linejoin="round"></path></svg>
@@ -72,7 +72,7 @@ html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;touch-action
 </div>
 <script>// CONFIG and STRINGS: every tunable value and every visible string of Brick Exit.
 var CONFIG = {
-  meta: { title: "Brick Exit", slug: "brick-exit", version: "v01", mode: "GAME", network: "universal", storeUrl: { ios: "", android: "" }, seed: 7 },
+  meta: { title: "Brick Exit", slug: "brick-exit", version: "v02", mode: "GAME", network: "universal", storeUrl: { ios: "", android: "" }, seed: 7 },
   uiSkin: "toy-brick",
   // id: {label, group, type, def, min, max, step, apply, dir, options, maxLen, unit, marketer, category, shared}
   params: {
@@ -113,7 +113,7 @@ var CONFIG = {
     endTitle: { label: "End card title override", group: "End card", type: "text", def: "", maxLen: 24, apply: "live", dir: null, marketer: true },
     endSub: { label: "End card subtitle override", group: "End card", type: "text", def: "", maxLen: 48, apply: "live", dir: null, marketer: true },
     // ---- internal tuning (?tune panel, URL) ----
-    gameDuration: { label: "Target game length, s", group: "Timing", type: "int", def: 60, min: 30, max: 300, step: 1, apply: "restart", dir: null },
+    gameDuration: { label: "Target game length, s", group: "Timing", type: "int", def: 180, min: 30, max: 300, step: 1, apply: "restart", dir: null },
     stageScale: { label: "Difficulty growth per stage", group: "Difficulty", type: "float", def: 1.35, min: 1, max: 2, step: 0.01, apply: "restart", dir: "low" },
     grabSlack: { label: "Finger grab tolerance, cells", group: "Player", type: "float", def: 0.3, min: 0, max: 0.6, step: 0.01, apply: "live", dir: "high" },
     hintAfterFail: { label: "Hint after a bump, s", group: "Difficulty", type: "float", def: 1.2, min: 0.5, max: 4, step: 0.1, apply: "live", dir: "low" },
@@ -124,7 +124,7 @@ var CONFIG = {
     musicTrack: { label: "Music track", group: "Sound", type: "enum", def: "generated", options: ["generated", "synth"], apply: "live", dir: null },
     uiSkin: { label: "Interface profile", group: "Colors", sub: "Interface", type: "enum", def: "toy-brick", options: ["toy-brick"], apply: "live", dir: null },
     // ---- shared (host settings) ----
-    maxPlayTime: { label: "Time cap, s", group: "Timing", type: "int", def: 90, min: 30, max: 300, step: 1, apply: "restart", dir: null, shared: "max_play_time" },
+    maxPlayTime: { label: "Time cap, s", group: "Timing", type: "int", def: 240, min: 30, max: 300, step: 1, apply: "restart", dir: null, shared: "max_play_time" },
     hintDelay: { label: "Hint after idle, s", group: "Timing", type: "float", def: 3, min: 1, max: 8, step: 0.1, apply: "live", dir: null, shared: "hint_delay" },
     language: { label: "Language", group: "Language", type: "enum", def: "auto", options: ["auto", "en", "es", "zh"], apply: "live", dir: null, shared: "locale" },
     ctaText: { label: "CTA label override", group: "Branding", type: "text", def: "", maxLen: 24, apply: "live", dir: null, shared: "cta_text" },
@@ -357,7 +357,7 @@ function simApply(s, mv) {
 // Offline: the full line of drags, or null when the board is stuck.
 function simSolve(level, cap) {
   var s = simMake(level), line = [];
-  cap = cap || 80;
+  cap = cap || 200;
   while (simAlive(s) && line.length < cap) {
     var mv = simBestMove(s, 3);
     if (!mv) return null;
@@ -373,6 +373,18 @@ function simSolve(level, cap) {
 // Stages 2 and 3 use the user's bigger pieces with wider doors. Each board is proven
 // solvable by simSolve (tools/solve.js) before it ships.
 // Colours: B blue, O orange, G green, P purple, K pink, Y yellow.
+// v02: board 1 is the reference board cell for cell: 7 x 9 packed solid with one-cell stud
+// bricks in diagonal colour stripes (green, blue, orange, pink, purple), the yellow 3x1 bar
+// in row 4, the yellow exit on top over cols 2-4 and five one-wide exits under cols 1-5.
+var BOARD1_ROWS = ["GBOKPGB", "PGBOKPG", "KPGBOKP", "OKPGBOK", "BOYYYBO", "GBOKPGB", "PGBOKPG", "KPGBOKP", "OKPGBOK"];
+function board1Blocks() {
+  var out = [{ shape: "I3h", color: "Y", x: 2, y: 4, hero: true }];
+  for (var y = 0; y < BOARD1_ROWS.length; y++) for (var x = 0; x < 7; x++) {
+    var c = BOARD1_ROWS[y].charAt(x);
+    if (c !== "Y") out.push({ shape: "I1", color: c, x: x, y: y });
+  }
+  return out;
+}
 var LEVELS = [
   {
     W: 7, H: 9,
@@ -380,19 +392,9 @@ var LEVELS = [
       { side: "top", a: 2, b: 4, color: "Y" },
       { side: "bottom", a: 1, b: 1, color: "B" }, { side: "bottom", a: 2, b: 2, color: "O" },
       { side: "bottom", a: 3, b: 3, color: "G" }, { side: "bottom", a: 4, b: 4, color: "P" },
-      { side: "bottom", a: 5, b: 5, color: "K" },
-      { side: "left", a: 1, b: 3, color: "O" },
-      { side: "right", a: 0, b: 2, color: "B" }, { side: "right", a: 3, b: 5, color: "K" }
+      { side: "bottom", a: 5, b: 5, color: "K" }
     ],
-    blocks: [
-      { shape: "I3h", color: "Y", x: 2, y: 4, hero: true },
-      { shape: "I4v", color: "O", x: 2, y: 5 }, { shape: "I4v", color: "G", x: 3, y: 5 }, { shape: "I4v", color: "P", x: 4, y: 5 },
-      { shape: "I2v", color: "B", x: 1, y: 7 }, { shape: "I2v", color: "K", x: 5, y: 7 },
-      { shape: "I2v", color: "B", x: 0, y: 5 }, { shape: "I2v", color: "K", x: 6, y: 4 },
-      { shape: "I2h", color: "O", x: 2, y: 3 }, { shape: "I2h", color: "B", x: 3, y: 2 }, { shape: "I1", color: "K", x: 4, y: 3 },
-      { shape: "I1", color: "O", x: 0, y: 2 }, { shape: "I1", color: "B", x: 6, y: 1 }, { shape: "I1", color: "B", x: 6, y: 0 },
-      { shape: "I1", color: "G", x: 2, y: 1 }, { shape: "I1", color: "P", x: 4, y: 0 }
-    ]
+    blocks: board1Blocks()
   },
   {
     W: 7, H: 9,
@@ -750,7 +752,8 @@ var LEVELS = [
     G.level = buildLevel(n - 1);
     var s = simMake(G.level);
     G.board = s;
-    s.blocks.forEach(function (b, i) { b.hero = G.level.blocks[i].hero; b.dx = b.x; b.dy = b.y; b.sc = 0; b.lift = 0; b.exitT = -1; b.shakeT = 0; b.spawnDelay = i * 0.025; ev("spawn", "brick" + i, 0.3); });
+    var stagger = Math.min(0.025, 0.9 / Math.max(1, s.blocks.length));
+    s.blocks.forEach(function (b, i) { b.hero = G.level.blocks[i].hero; b.dx = b.x; b.dy = b.y; b.sc = 0; b.lift = 0; b.exitT = -1; b.shakeT = 0; b.spawnDelay = i * stagger; ev("spawn", "brick" + i, 0.3); });
     G.total = s.blocks.length; G.cleared = 0;
     G.boardIn = 0;
     bot.reset(); hint.reset();
@@ -778,15 +781,23 @@ var LEVELS = [
   }
 
   // ---------- layout ----------
-  var CELL = 46;
+  var CELL = 46, DOOR_T = 26, DOOR_GAP = 3, BAND = 38;
   var L = { W: 390, H: 844, s: 1, ox: 0, oy: 0, dpr: 1, u: 1, land: false, bx: 34, by: 210 };
   var cv, cx, gameEl, stageEl;
+  // Reference composition: the board fills the width (a 7-wide board is 364 design px) and
+  // sits centred at 51 % of the height inside a full-width frame band; a board with side
+  // doors keeps room for them at the edges.
+  function boardFit() {
+    var s = G.board, side = s.doors.some(function (d) { return d.side === "left" || d.side === "right"; });
+    var m = side ? DOOR_T + DOOR_GAP + 6 : 9;
+    return Math.min(1.3, 384 / (s.W * CELL + 2 * m));
+  }
   function boardOrigin() {
     var s = G.board;
     var bw = s.W * CELL, bh = s.H * CELL;
-    var zoom = P("cameraDistance");
+    var zoom = P("cameraDistance") * boardFit();
     var x = 195 - bw / 2 + P("cameraYaw") * 1.2;
-    var y = 418 - bh / 2 + P("cameraPitch") * 1.5 + P("cameraHeight") * 12;
+    var y = 431 - bh / 2 + P("cameraPitch") * 1.5 + P("cameraHeight") * 12;
     return { x: x, y: y, w: bw, h: bh, z: zoom };
   }
   function layout() {
@@ -794,7 +805,7 @@ var LEVELS = [
     var W = Math.max(1, r.width), H = Math.max(1, r.height);
     L.W = W; L.H = H;
     L.land = W > H * 0.9;
-    L.s = H / W >= 1.6 ? Math.min(W / 390, H / 844) : Math.min(W / 390, H / 600);
+    L.s = H / W >= 1.6 ? Math.min(W / 390, H / 844) : Math.min(W / 390, H / 640);
     L.ox = (W - 390 * L.s) / 2; L.oy = (H - 844 * L.s) / 2;
     L.dpr = Math.max(0.5, Math.min(2, 1000 / Math.min(W, H)));
     L.u = Math.min(W / 390, H / 844);
@@ -808,7 +819,7 @@ var LEVELS = [
   function boardRectScreen() {
     if (!G.board) return { x: 0, y: 0, w: 0, h: 0 };
     var o = boardOrigin(), z = o.z, cxm = o.x + o.w / 2, cym = o.y + o.h / 2;
-    var a = toScreen(cxm - (o.w / 2 + 16) * z, cym - (o.h / 2 + 16) * z), b = toScreen(cxm + (o.w / 2 + 16) * z, cym + (o.h / 2 + 16) * z);
+    var a = toScreen(cxm - (o.w / 2 + 9) * z, cym - (o.h / 2 + BAND) * z), b = toScreen(cxm + (o.w / 2 + 9) * z, cym + (o.h / 2 + BAND) * z);
     return { x: a[0], y: a[1], w: b[0] - a[0], h: b[1] - a[1] };
   }
   function cellToScreen(x, y) {
@@ -822,17 +833,20 @@ var LEVELS = [
   }
   function layoutUi() {
     var br = boardRectScreen(), u = L.u;
-    var hud = $("hudTop"), hl = $("hintLine"), mute = $("mute");
+    var hud = $("hudTop"), hl = $("hintLine"), mute = $("mute"), pill = $("levelPill");
     var safeTop = 8, pad = Math.max(10, 12 * u);
-    mute.style.left = pad + "px";
+    var mw = Math.max(48, 46 * u);
+    // reference layout: level chip top-left (the logo corner), sound top-right,
+    // the big hook line centred at 10 % of the height, the board right under it
+    pill.style.left = pad + "px"; pill.style.top = (safeTop + 2) + "px";
+    mute.style.left = (L.W - pad - mw) + "px"; mute.style.top = safeTop + "px";
+    var pillBottom = safeTop + 2 + pill.offsetHeight;
     if (!L.land) {
-      var topSpace = br.y - safeTop;
-      hud.style.left = (pad + Math.max(48, 46 * u) + 6) + "px"; hud.style.right = (pad + Math.max(48, 46 * u) + 6) + "px";
-      hud.style.top = Math.max(safeTop, Math.min(56 * u, topSpace - hud.offsetHeight - 6)) + "px";
+      hud.style.left = pad + "px"; hud.style.right = pad + "px";
       hud.style.width = ""; hud.style.bottom = "";
-      mute.style.top = Math.max(56, 58 * u) + "px";
-      if (hud.offsetTop + hud.offsetHeight > br.y - 2) hud.style.top = Math.max(4, br.y - hud.offsetHeight - 4) + "px";
-      mute.style.top = Math.min(parseFloat(mute.style.top), Math.max(54, hud.offsetTop + hud.offsetHeight - Math.max(48, 46 * u))) + "px";
+      var goalH = $("goal").offsetHeight || 30;
+      var top = Math.min(L.H * 0.1 - goalH / 2, br.y - hud.offsetHeight - 6);
+      hud.style.top = Math.max(Math.max(safeTop, Math.min(pillBottom + 4, mw + safeTop + 2)), top) + "px";
       var below = br.y + br.h;
       hl.style.left = "50%"; hl.style.right = ""; hl.style.transform = "translateX(-50%)";
       hl.style.top = (below + Math.max(10, (L.H - below - hl.offsetHeight) * 0.35)) + "px";
@@ -840,8 +854,7 @@ var LEVELS = [
     } else {
       var leftW = br.x - 2 * pad;
       hud.style.left = pad + "px"; hud.style.right = ""; hud.style.width = Math.max(120, leftW) + "px";
-      mute.style.top = "56px";
-      hud.style.top = Math.max(56 + Math.max(48, 46 * u) + 10, (L.H - hud.offsetHeight) * 0.3) + "px";
+      hud.style.top = Math.max(pillBottom + 10, (L.H - hud.offsetHeight) * 0.3) + "px";
       var rx = br.x + br.w + pad;
       hl.style.left = rx + "px"; hl.style.right = ""; hl.style.transform = "none";
       hl.style.maxWidth = Math.max(120, L.W - rx - pad) + "px";
@@ -865,12 +878,12 @@ var LEVELS = [
       var sc = Math.max(W / im.naturalWidth, H / im.naturalHeight) * 1.04, par = P("cameraFov") * 2;
       var iw = im.naturalWidth * sc, ih = im.naturalHeight * sc;
       var ox = (W - iw) / 2 + Math.sin(G.t * 0.2) * par, oy = (H - ih) / 2 + Math.cos(G.t * 0.17) * par;
-      cx.globalAlpha = 0.55; cx.globalCompositeOperation = "luminosity";
+      cx.globalAlpha = 0.3; cx.globalCompositeOperation = "luminosity";
       cx.drawImage(im, ox, oy, iw, ih);
       cx.globalCompositeOperation = "source-over"; cx.globalAlpha = 1;
     }
     var v = cx.createRadialGradient(W / 2, H * 0.45, Math.min(W, H) * 0.3, W / 2, H * 0.5, Math.max(W, H) * 0.75);
-    v.addColorStop(0, "rgba(0,0,0,0)"); v.addColorStop(1, hexA(fog, 0.55));
+    v.addColorStop(0, "rgba(0,0,0,0)"); v.addColorStop(1, hexA(fog, 0.45));
     cx.fillStyle = v; cx.fillRect(0, 0, W, H);
   }
   function hexA(h, a) { var c = hexRgb(h); return "rgba(" + c[0] + "," + c[1] + "," + c[2] + "," + a + ")"; }
@@ -885,11 +898,11 @@ var LEVELS = [
     cx.setTransform(d * s * z, 0, 0, d * s * z, d * (L.ox + (cxm + jx + (ox || 0)) * s - (o.w / 2) * s * z), d * (L.oy + (cym + jy + (oy || 0)) * s - (o.h / 2) * s * z));
   }
   function doorRect(dr, W, H) {
-    var T = 14, inset = 3;
-    if (dr.side === "top") return [dr.a * CELL + inset, -T - 4, (dr.b - dr.a + 1) * CELL - 2 * inset, T];
-    if (dr.side === "bottom") return [dr.a * CELL + inset, H * CELL + 4, (dr.b - dr.a + 1) * CELL - 2 * inset, T];
-    if (dr.side === "left") return [-T - 4, dr.a * CELL + inset, T, (dr.b - dr.a + 1) * CELL - 2 * inset];
-    return [W * CELL + 4, dr.a * CELL + inset, T, (dr.b - dr.a + 1) * CELL - 2 * inset];
+    var T = DOOR_T, g = DOOR_GAP, inset = 1;
+    if (dr.side === "top") return [dr.a * CELL + inset, -T - g, (dr.b - dr.a + 1) * CELL - 2 * inset, T];
+    if (dr.side === "bottom") return [dr.a * CELL + inset, H * CELL + g, (dr.b - dr.a + 1) * CELL - 2 * inset, T];
+    if (dr.side === "left") return [-T - g, dr.a * CELL + inset, T, (dr.b - dr.a + 1) * CELL - 2 * inset];
+    return [W * CELL + g, dr.a * CELL + inset, T, (dr.b - dr.a + 1) * CELL - 2 * inset];
   }
   function drawBoard() {
     var s = G.board, W = s.W, H = s.H;
@@ -901,12 +914,16 @@ var LEVELS = [
     if (hint.target && P("cameraLead") > 0 && G.st === "play") { var tb = s.blocks[hint.target.id]; if (tb) lead = (tb.x + 1 - W / 2) * 0.6 * P("cameraLead"); }
     G.panX = damp(G.panX || 0, lead, 2 * P("cameraFollow"), 1 / 60);
     designTransform(intro * punch, G.panX, slide + out);
-    // frame
+    // frame: a full-width plastic band behind the board (the reference composition), the
+    // grid well inset in it, the door slabs set into the band's thickness
     var frame = P("pathColor"), ground = P("groundColor");
-    cx.fillStyle = "rgba(10,12,40,.35)"; rr(-16, -12, W * CELL + 32, H * CELL + 34, 22); cx.fill();
-    cx.fillStyle = shade(frame, -0.25); rr(-16, -16, W * CELL + 32, H * CELL + 32, 22); cx.fill();
-    cx.fillStyle = frame; rr(-16, -18, W * CELL + 32, H * CELL + 30, 22); cx.fill();
-    cx.fillStyle = ground; rr(-4, -4, W * CELL + 8, H * CELL + 8, 12); cx.fill();
+    var bx0 = -2400, bw0 = 4800 + W * CELL, by0 = -BAND, bh0 = H * CELL + 2 * BAND;
+    cx.fillStyle = "rgba(10,12,40,.35)"; cx.fillRect(bx0, by0 - 3, bw0, bh0 + 12);
+    cx.fillStyle = shade(frame, 0.14); cx.fillRect(bx0, by0, bw0, bh0);
+    cx.fillStyle = shade(frame, 0.45); cx.fillRect(bx0, by0, bw0, 2.5);
+    cx.fillStyle = shade(frame, -0.3); cx.fillRect(bx0, by0 + bh0 - 4, bw0, 4);
+    cx.fillStyle = shade(frame, -0.18); rr(-7, -7, W * CELL + 14, H * CELL + 14, 12); cx.fill();
+    cx.fillStyle = ground; rr(-4, -4, W * CELL + 8, H * CELL + 8, 10); cx.fill();
     // cell wells: baked look, a darker well with a faint stud ring per cell
     for (var y = 0; y < H; y++) for (var x = 0; x < W; x++) {
       var px = x * CELL, py = y * CELL;
@@ -925,13 +942,14 @@ var LEVELS = [
       cx.fillStyle = col; rr(r[0], r[1], r[2], r[3], 6); cx.fill();
       cx.fillStyle = "rgba(255,255,255,.28)"; rr(r[0] + 3, r[1] + 2, r[2] - 6, r[3] * 0.35, 3); cx.fill();
       // outward chevron
-      var mx = r[0] + r[2] / 2, my = r[1] + r[3] / 2, a = 5;
+      var mx = r[0] + r[2] / 2, my = r[1] + r[3] / 2, a = 7.5;
       cx.fillStyle = arrowCol; cx.beginPath();
+      cx.lineJoin = "round"; cx.lineWidth = 3; cx.strokeStyle = arrowCol;
       if (dr.side === "top") { cx.moveTo(mx - a, my + a * 0.5); cx.lineTo(mx, my - a * 0.6); cx.lineTo(mx + a, my + a * 0.5); }
       else if (dr.side === "bottom") { cx.moveTo(mx - a, my - a * 0.5); cx.lineTo(mx, my + a * 0.6); cx.lineTo(mx + a, my - a * 0.5); }
       else if (dr.side === "left") { cx.moveTo(mx + a * 0.5, my - a); cx.lineTo(mx - a * 0.6, my); cx.lineTo(mx + a * 0.5, my + a); }
       else { cx.moveTo(mx - a * 0.5, my - a); cx.lineTo(mx + a * 0.6, my); cx.lineTo(mx - a * 0.5, my + a); }
-      cx.closePath(); cx.fill();
+      cx.closePath(); cx.fill(); cx.stroke();
     });
     // bricks: shadows first, then bodies (sorted so the lifted brick draws last)
     var order = s.blocks.filter(function (b) { return b.alive || b.exitT >= 0; }).sort(function (a, b) { return (a.lift - b.lift) || (a.y - b.y); });
